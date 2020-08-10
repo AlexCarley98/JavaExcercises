@@ -4,6 +4,7 @@ public class Results{
 
     public static void main(String[] args) {
    int total = marks(87,60,110);
+   System.out.println(percentage(total));
     }
     public static int marks(int Biol, int Phys, int Chem){
         System.out.println(Biol);
@@ -13,7 +14,7 @@ public class Results{
         System.out.println(total);
         return total;
     }
-    public static void percentage(int total){
-
+    public static double percentage(double total){
+    return (total*100)/450;
     }
 }
