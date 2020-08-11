@@ -8,15 +8,15 @@ public class Results{
         int Chem = 11;
         int Fails = 0;
         int total = marks(Biol,Phys,Chem);
-        boolean BiolP = BiolPercentage(Biol);
+        boolean BiolP = CheckPass(Biol);
         if (!BiolP){
             Fails++;
         }
-        boolean PhysP = PhysPercentage(Phys);
+        boolean PhysP = CheckPass(Phys);
         if (!PhysP){
             Fails++;
         }
-        boolean ChemP = ChemPercentage(Chem);
+        boolean ChemP = CheckPass(Chem);
         if (!ChemP){
             Fails++;
         }
@@ -30,29 +30,14 @@ public class Results{
         System.out.println(total);
         return total;
     }
-    public static boolean BiolPercentage(double Biol){
-        if(((Biol*100)/150)>=60){
+    public static boolean CheckPass (double Result) {
+        if (((Result * 100) / 150) >= 60) {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }
 
-    public static boolean PhysPercentage(double Phys) {
-        if (((Phys * 100) / 150) >= 60) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-    public static boolean ChemPercentage(double Chem) {
-        if (((Chem * 100) / 150) >= 60) {
-            return true;
-        } else {
-            return false;
-        }
-    }
     public static void percentage(double total,boolean BiolP, boolean PhysP, boolean ChemP, int Fails){
     double totalP = (total*100)/450;
     if(BiolP && PhysP && ChemP){
