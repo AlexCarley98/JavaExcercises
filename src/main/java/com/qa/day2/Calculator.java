@@ -2,12 +2,12 @@ package com.qa.day2;
 
 public class Calculator{
     public static void main(String[]args){
-        int num1 = 96;
-        int num2 = 7;
+        int num1 = 4;
+        int num2 = 2;
         System.out.println(addition(num1, num2));
         System.out.println(multiplication(num1, num2));
         System.out.println(subtraction(num1, num2));
-        if(num1 < num2) {
+        if(num1 >= num2) {
             System.out.println(division(num1, num2));
             }
         else {
