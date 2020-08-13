@@ -9,7 +9,7 @@ public class porridge{
     }
     public static void seatCheck(int weight, int temp){
         for(int i = 0; i < seatStrength.length; i++) {
-            if(weight<seatStrength[i] && temp> porridgeTemp[i]){
+            if(weight<seatStrength[i] && temp>= porridgeTemp[i]){
                 System.out.println("Seat number: "+(i+1));
             }
         }
