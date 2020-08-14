@@ -32,6 +32,12 @@ public class AppTest
     @Test
     public void testcalculator(){
         calculator calc = new calculator();
-       //assertEquals("2.0/4.0*6.0=3.0", );
+        assertEquals("2.0/4.0*6.0=3.0",calculator.calc1(2,4,6,3) );
+        assertEquals("1.0*1.0+2.0=3.0",calculator.calc1(1,1,2,3) );
+        assertEquals("4.0/4.0+3.0=4.0",calculator.calc1(4,4,3,4) );
+        assertEquals("8.0/4.0*3.0=6.0",calculator.calc1(8,4,3,6) );
+        assertEquals("9.0-3.0+1.0=7.0",calculator.calc1(9,3,1,7 ) );
+
+
     }
 }

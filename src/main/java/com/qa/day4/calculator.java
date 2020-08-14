@@ -5,17 +5,19 @@ import java.util.Scanner;
 
 public class calculator{
     static Scanner scan = new Scanner(System.in);
-    public static List<String> operators = new ArrayList<>();
+
     public static void main(String[] args) {
+       System.out.println(calc1(1,1,2,3));
+
+    }
+    public static String calc1(double a, double b, double c, double d){
+        List<String> operators = new ArrayList<>();
         operators.add("*");
         operators.add("/");
         operators.add("+");
         operators.add("-");
-        System.out.println(calc1(2,4,6,3));
 
-    }
-    public static String calc1(double a, double b, double c, double d){
-        String result = "";
+        String result = "";;
         for(int i = 0; i <operators.size(); i++){
             if (operators.get(i) == "+"){
                 String op1 = "+";
